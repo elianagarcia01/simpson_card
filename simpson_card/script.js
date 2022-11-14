@@ -1,41 +1,28 @@
-const dataUrl = "https://thesimpsonsquoteapi.glitch.me/quotes?count=6"
+const dataUrl = "https://thesimpsonsquoteapi.glitch.me/quotes?count=20"
 
 let simpsonsdate = []
 
 function showSimpsons() {
     let container = document.getElementById("container")
-    let body = ""
+    let body = `<div class="row">`
 
     simpsonsdate.forEach(simpson => {
-        //let  [{ character, quote,image }]  = simpsonsdate
-        body += `
-            <h4>${simpson.character} </h4>
-            <p>${simpson.quote}</p>
-            <img src="${simpson.image}" width="90px">
-        `
+        body +=
+            `  
+            <div class="col">
+                <div class="card" style="width: 12rem;">
+                    <img class="card-img-top" src="${simpson.image}" alt="simpsonImg">
+                    <div class="card-body">
+                        <h5 class="card-title" id="character">${simpson.character}</h5>
+                        <p class="card-text" id="quote">${simpson.quote}</p>
+                    </div>
+                </div>
+            </div>    
+      `
     })
-
-    container.innerHTML += body;
+    
+    container.innerHTML += body + "</div>";
 }
-
-/*let btn = document.getElementById("btn")
-function prueba() {
-
-    let [{ character, quote, image }] = simpsonsdate
-    body = ""
-
-    for (let i = 0; i < simpsonsdate.length; i++) {
-        body += simpsonsdate[i]
-
-            `
-            <h4>${character} </h4>
-            <p>${quote}</p>
-            <img src="${image}" width="90px">
-        `
-    }
-
-btn.addEventListener("click", prueba)
-}*/
 
 document.addEventListener("DOMContentLoaded", function (e) {
     fetch(dataUrl)
