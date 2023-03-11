@@ -1,4 +1,4 @@
-const dataUrl = "https://thesimpsonsquoteapi.glitch.me/quotes?count=20"
+const dataUrl = "https://thesimpsonsquoteapi.glitch.me/quotes?count=25"
 
 let simpsonsdate = []
 
@@ -10,17 +10,18 @@ function showSimpsons() {
         body +=
             `  
             <div class="col">
-                <div class="card" style="width: 12rem;">
-                    <img class="card-img-top" src="${simpson.image}" alt="simpsonImg">
-                    <div class="card-body">
-                        <h5 class="card-title" id="character">${simpson.character}</h5>
-                        <p class="card-text" id="quote">${simpson.quote}</p>
-                    </div>
-                </div>
-            </div>    
+        <div class="card  border-dark">
+        <div class="card-header   border-dark"> 
+            <img class="card-img-top" src="${simpson.image}" alt="simpsonImg">
+            </div>
+            <div class="card-body scrollable-card" style="overflow-y: auto; height: 200px;">
+                <h5 class="card-title" id="character">${simpson.character}</h5>
+                <p class="card-text" id="quote">${simpson.quote}</p>
+            </div>
+        </div>
+    </div>   
       `
     })
-    
     container.innerHTML += body + "</div>";
 }
 

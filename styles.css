@@ -1,0 +1,87 @@
+body {
+    font-family: "Verdana";
+    background-color: #FAFFA9;
+}
+
+.navbar{
+    background-color: #F8FF81;
+}
+
+.navbar-brand{
+    padding-left: 20px;
+}
+
+
+.title img {
+    margin-top: 30px;
+    height: 50px;
+}
+
+.about {
+    width: 900px;
+}
+
+.about p {
+    text-align: justify;
+    font-size: 17px;
+    margin-top: 18px;
+}
+
+.contenedor {
+    margin: 30px 80px 80px;
+}
+
+.card-img-top {
+    width: 200px;
+    height: 210px;
+    object-fit: cover;
+    object-position: center top;
+}
+
+.card {
+    margin-bottom: 40px;
+    background-color: #F8FF94;
+}
+
+.card-title, .card-text{
+    display: flex;
+    justify-content: center;   
+}
+
+.card-header{
+    background-color: #F5FD82;
+    padding: 0%;
+    display: flex;
+    justify-content: center;
+
+}
+
+.card-text{
+    font-size: 15px;
+    
+}
+
+/*SCROLL*/
+.scrollable-card::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+
+.scrollable-card::-webkit-scrollbar:vertical {
+    width:7px;
+    height: 5px;
+}
+
+.scrollable-card::-webkit-scrollbar-button:increment,.scrollable-card::-webkit-scrollbar-button {
+    display: none;
+} 
+
+.scrollable-card::-webkit-scrollbar-thumb {
+    background-color: #FEFD7B;
+    border-radius: 20px;
+    border: 2px solid  #F1EF39;
+}
+
+.scrollable-card::-webkit-scrollbar-track {
+    border-radius: 10px;  
+}
+
